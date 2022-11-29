@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AND_FinalProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="notifications">Notifications</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="profile">Profile</string>
+    <string name="prompt_full_name" />
+    <string name="prompt_email" />
+    <string name="change_image" />
+    <string name="update_profile">Update Profile</string>
+    <string name="prompt_phone" />
+</resources>
