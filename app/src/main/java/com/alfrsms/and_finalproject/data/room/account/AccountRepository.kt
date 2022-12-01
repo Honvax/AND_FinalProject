@@ -3,8 +3,8 @@ package com.alfrsms.and_finalproject.data.room.account
 import javax.inject.Inject
 
 class AccountRepository @Inject constructor(private val accountDao: AccountDao) {
-    suspend fun readAccountByUsername(userName: String): AccountEntity {
-        return accountDao.readAccountByUsername(userName)
+    suspend fun readAccountByContact(userName: String): AccountEntity {
+        return accountDao.readAccountByContact(userName)
     }
 
     suspend fun readAccountById(id: Long): AccountEntity? {

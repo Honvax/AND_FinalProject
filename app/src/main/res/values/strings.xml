@@ -6,11 +6,24 @@
     <string name="history">History</string>
     <string name="notifications">Notifications</string>
     <string name="wishlist">Wishlist</string>
-    <string name="profile">Profile</string>
+    <string name="personal_info">Personal Info</string>
     <string name="prompt_full_name">Name </string>
     <string name="prompt_email">E-Mail </string>
     <string name="change_image">Change Image</string>
     <string name="update_profile">Update Profile</string>
-    <string name="prompt_phone" >Phone Number</string>
-    <string name="prompt_password" >Password</string>
+    <string name="prompt_contact">Phone Number</string>
+    <string name="prompt_password">Password</string>
+    <string name="search_title">Search Result </string>
+    <string name="flight_details_title">Flight Details </string>
+    <string name="history_title">History </string>
+    <string name="notifications_title">Notifications </string>
+    <string name="wishlist_title">Wishist </string>
+    <string name="edit" />
+    <string name="content_description_search" />
+    <string name="content_description_more"> </string>
+    <string name="profile_id_card">ID Card </string>
+    <string name="profile_date_birth">Date of Birth </string>
+    <string name="profile_address">Address </string>
+    <string name="profile_gender">Gender </string>
+    <string name="profile_username">Username </string>
 </resources>

@@ -12,9 +12,9 @@ import javax.inject.Inject
 
 class DataStoreManager @Inject constructor(@ApplicationContext private val context: Context) {
 
-    suspend fun setUsername(username: String) {
+    suspend fun setContact(contact: String) {
         context.accountDataStore.edit {
-            it[USERNAME] = username
+            it[CONTACT] = contact
         }
     }
 
@@ -36,11 +36,6 @@ class DataStoreManager @Inject constructor(@ApplicationContext private val conte
         }
     }
 
-    suspend fun setAddress(address: String){
-        context.accountDataStore.edit {
-            it[ADDRESS] = address
-        }
-    }
 
     suspend fun setImage(image: String){
         context.accountDataStore.edit {
@@ -54,21 +49,15 @@ class DataStoreManager @Inject constructor(@ApplicationContext private val conte
         }
     }
 
-    fun getUsername(): Flow<String> {
+    fun getContact(): Flow<String> {
         return context.accountDataStore.data.map {
-            it[USERNAME] ?: ""
+            it[CONTACT] ?: ""
         }
     }
 
     fun getPassword(): Flow<String> {
         return context.accountDataStore.data.map {
             it[PASSWORD] ?: ""
-        }
-    }
-
-    fun getAddress(): Flow<String> {
-        return context.accountDataStore.data.map {
-            it[ADDRESS] ?: ""
         }
     }
 
@@ -87,10 +76,9 @@ class DataStoreManager @Inject constructor(@ApplicationContext private val conte
     companion object {
         private const val DATASTORE_NAME = "database"
 
-        private val USERNAME = stringPreferencesKey("username_key")
+        private val CONTACT = stringPreferencesKey("contact_key")
         private val PASSWORD = stringPreferencesKey("password_key")
         private val EMAIL = stringPreferencesKey("email_key")
-        private val ADDRESS = stringPreferencesKey("address_key")
         private val FULLNAME = stringPreferencesKey("fullname_key")
         private val IMAGE = stringPreferencesKey("image_key")
         private val LOGIN_STATUS = booleanPreferencesKey("login_status_key")

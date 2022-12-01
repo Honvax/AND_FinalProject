@@ -4,8 +4,8 @@ import androidx.room.*
 
 @Dao
 interface AccountDao {
-    @Query("SELECT * FROM ACCOUNT_DATABASE WHERE USER_NAME == :userName")
-    suspend fun readAccountByUsername(userName: String): AccountEntity
+    @Query("SELECT * FROM ACCOUNT_DATABASE WHERE Contact == :contact")
+    suspend fun readAccountByContact(contact: String): AccountEntity
 
     @Query("SELECT * FROM ACCOUNT_DATABASE WHERE id == :id LIMIT 1")
     suspend fun readAccountById(id : Long) : AccountEntity?

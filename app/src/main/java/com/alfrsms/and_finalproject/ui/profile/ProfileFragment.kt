@@ -23,13 +23,9 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import coil.load
 import coil.transform.RoundedCornersTransformation
-import com.dimasrizqi.challenge7.R
-import com.dimasrizqi.challenge7.databinding.FragmentProfileBinding
-import com.dimasrizqi.challenge7.utils.Utils
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.analytics.ktx.logEvent
-import com.google.firebase.ktx.Firebase
+import com.alfrsms.and_finalproject.R
+import com.alfrsms.and_finalproject.databinding.FragmentProfileBinding
+import com.alfrsms.and_finalproject.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.ByteArrayOutputStream
 
@@ -40,7 +36,6 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
     private val profileViewModel: ProfileViewModel by viewModels()
 
     override fun onCreateView(
@@ -54,13 +49,9 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        firebaseAnalytics = Firebase.analytics
 
-        binding.btnChangeImage.setOnClickListener { checkingPermission() }
-        binding.btnProfileAnalytics.setOnClickListener { analytics() }
-        binding.btnProfileCrashlytics.setOnClickListener { crashlytics() }
+        binding.tvChangeImage.setOnClickListener { checkingPermission() }
         binding.btnProfileUpdate.setOnClickListener { toUpdateAccount() }
-        binding.btnProfileLogout.setOnClickListener { toLogout() }
 
         profileViewModel.getImage().observe(viewLifecycleOwner) {
             if (it.isNullOrEmpty().not()) {
@@ -166,22 +157,14 @@ class ProfileFragment : Fragment() {
             .show()
     }
 
-    private fun analytics() {
-        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
-
-        }
-    }
-
-    private fun crashlytics() {
-        throw RuntimeException("Test Crash")
-    }
 
     private fun toUpdateAccount() {
-        val usernameProfile = binding.etProfileUsername.text.toString()
         val fullnameProfile = binding.etProfileFullname.text.toString()
-        val address = binding.etProfileAddress.text.toString()
+        val contactProfile = binding.etProfileContact.text.toString()
+        val  email= binding.etProfileEmail.text.toString()
+        val  password = binding.etProfilePassword.text.toString()
 
-        profileViewModel.editAccount(usernameProfile, fullnameProfile, address)
+        profileViewModel.editAccount( fullnameProfile,contactProfile,email, password)
         Toast.makeText(requireContext(), "Update Success", Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
     }

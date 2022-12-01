@@ -54,11 +54,12 @@ class ProfileViewModel @Inject constructor(private val dataStoreManager: DataSto
         outputUri = Utils.uriOrNull(outputImageUri)
     }
 
-    fun editAccount(username: String, fullname: String, address: String) {
+    fun editAccount(fullname: String,contact: String,email: String,password:String) {
         viewModelScope.launch {
-            dataStoreManager.setUsername(username)
             dataStoreManager.setFullname(fullname)
-            dataStoreManager.setAddress(address)
+            dataStoreManager.setContact(contact)
+            dataStoreManager.setEmail(email)
+            dataStoreManager.setPassword(password)
         }
     }
 
