@@ -1,13 +1,14 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/WidthParentAndHeightContent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".ui.notification.NotificationFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -17,13 +18,38 @@
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/notifications_title"
-            app:titleCentered="true"
+            android:background="@color/white"
             app:menu="@menu/top_app_bar"
-            app:navigationIcon="@drawable/ic_back"/>
-
-
-
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/black"
+            app:title="@string/notifications_title"
+            app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
 
-</FrameLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/cv_notification1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        tools:layout="@layout/cv_notif" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/cv_notification2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        tools:layout="@layout/cv_notif"
+        android:backgroundTint="@color/base"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/cv_notification3"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        tools:layout="@layout/cv_notif" />
+
+
+</LinearLayout>

@@ -26,4 +26,12 @@
     <string name="profile_address">Address </string>
     <string name="profile_gender">Gender </string>
     <string name="profile_username">Username </string>
+    <string name="todo">TODO</string>
+    <string name="in_230">IN-230</string>
+    <string name="jkt_jakarta">JKT (Jakarta)</string>
+    <string name="ringkasan_e_ticket_anda29_10_2022_17_40_air_asia_584_jkt_jpn_kvlvae_jumlah_2_penumpang_telah_berhasil_dilakukan_hubungi_cskami_jika_membutuhkan_bantuan">Ringkasan E-ticket anda29-10-2022/17:40/ Air Asia 584 /JKT-JPN /KVLVAE.Jumlah : 2 Penumpang.Telah berhasil dilakukan, hubungi CSkami jika membutuhkan bantuan.</string>
+    <string name="fd_departure_date">Departure Date</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="sr_check">Check</string>
 </resources>

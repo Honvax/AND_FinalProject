@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- Base application theme. -->
     <style name="Theme.AND_FinalProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -49,5 +49,26 @@
         <item name="boxCornerRadiusTopEnd">20dp</item>
         <item name="boxCornerRadiusBottomStart">20dp</item>
         <item name="boxCornerRadiusBottomEnd">20dp</item>
+    </style>
+    <style name="TopBar">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="width_content">
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/flight_details_title"
+                app:titleCentered="true"
+                app:menu="@menu/top_app_bar"
+                app:navigationIcon="@drawable/ic_back"/>
+        </com.google.android.material.appbar.AppBarLayout>
     </style>
 </resources>
