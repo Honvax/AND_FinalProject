@@ -26,30 +26,11 @@
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_notification1"
-        android:layout_width="320dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_notification"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_notif" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_notification2"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_notif"
-        android:backgroundTint="@color/base"/>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_notification3"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_notif" />
+        tools:listitem="@layout/cv_notif" />
 
 
 </LinearLayout>

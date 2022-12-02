@@ -26,30 +26,10 @@
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_fd1"
-        android:layout_width="306dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sr_list_flight"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_search" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_fd2"
-        android:layout_width="306dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_search"
-        android:backgroundTint="@color/base"/>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/cv_fd3"
-        android:layout_width="306dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
-        tools:layout="@layout/cv_search" />
-
+        tools:listitem="@layout/cv_search" />
 
 </LinearLayout>
