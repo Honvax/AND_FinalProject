@@ -260,10 +260,14 @@
 
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_profile_update"
             style="@style/Button"
             android:text="@string/update_profile"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
